@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">POC_NativeBridge</string>
+    <string name="channel_name">channel_name</string>
+    <string name="channel_description">channel_description</string>
+    <string name="fcm_message">title</string>
+    <string name="default_notification_channel_id">Brdidge</string>
+</resources>
