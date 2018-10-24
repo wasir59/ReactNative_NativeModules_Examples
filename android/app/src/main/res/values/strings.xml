@@ -4,4 +4,6 @@
     <string name="channel_description">channel_description</string>
     <string name="fcm_message">title</string>
     <string name="default_notification_channel_id">Brdidge</string>
+    <string name="v_type">video/*</string>
+    <string name="select_videos">Select videos</string>
 </resources>

@@ -15,7 +15,7 @@ import {
   Button,
   TouchableOpacity
 } from "react-native";
-import ToastExample from "./JsBridge";
+import NativeBridge from "./JsBridge";
 type Props = {};
 export default class App extends Component<Props> {
   constructor(props) {
@@ -24,10 +24,13 @@ export default class App extends Component<Props> {
   }
 
   sendToNative = () => {
-    ToastExample.showNotification(this.state.inputString);
+    NativeBridge.showNotification(this.state.inputString);
   };
   onSearchTextChanged = event => {
-    this.setState({ inputString: event.nativeEvent.text });
+    this.setState({
+      isHidden: true,
+      inputString: event.nativeEvent.text
+    });
   };
   render() {
     return (
@@ -58,6 +61,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     height: 36,
+    display:"none",
     padding: 5,
     marginRight: 5,
     fontSize: 15,

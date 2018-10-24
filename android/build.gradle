@@ -1,13 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext {
-        buildToolsVersion = "27.0.3"
-        minSdkVersion = 16
-        compileSdkVersion = 27
-        targetSdkVersion = 26
-        supportLibVersion = "27.1.1"
-    }
     repositories {
         jcenter()
         google()
@@ -36,4 +29,21 @@ allprojects {
 task wrapper(type: Wrapper) {
     gradleVersion = '4.4'
     distributionUrl = distributionUrl.replace("bin", "all")
+}
+ext {
+    library_version = '26.1.0'
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.2'
+    minSdkVersion = 16
+    targetSdkVersion = 26
+    guavaVersion = '18.0'
+
+    // testing lib version
+    junitVersion = '4.12'
+    mockitoVersion = '1.10.19'
+    powerMockito = '1.6.2'
+    hamcrestVersion = '1.3'
+    runnerVersion = '0.5'
+    rulesVersion = '0.5'
+    espressoVersion = '2.2.2'
 }
